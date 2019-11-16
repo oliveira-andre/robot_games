@@ -2,8 +2,7 @@
 
 module NuuvemSearchService
   class << self
-    LINK = 'https://www.nuuvem.com/catalog/price/promo/sort/bestselling/'\
-           'sort-mode/desc'
+    LINK = ENV['nuuvem_link']
 
     def execute
       cards.map { |card| hash_pattern(card) }
