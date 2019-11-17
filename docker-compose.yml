@@ -6,13 +6,13 @@ services:
     volumes:
       - /box
 
-  website:
-    build: .
+  api:
+    build: ./api
     command: bash start
     ports:
       - '3000:3000'
     volumes:
-      - '.:/robot_api'
+      - './api:/robot_api'
     volumes_from:
       - box
 
