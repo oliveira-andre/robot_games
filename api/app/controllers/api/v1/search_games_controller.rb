@@ -15,10 +15,6 @@ module Api
       def load_nuuvem_games
         @nuuvem_games = NuuvemSearchService.execute
       end
-
-      def send_message
-        LaunchTelegramBotJob.perform_later(@nuuvem_games)
-      end
     end
   end
 end
