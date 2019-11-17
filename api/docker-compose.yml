@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  box:
+    image: busybox
+    volumes:
+      - /box
+
+  website:
+    depends_on:
+      - 'postgres'
+    build: .
+    command: bash start
+    ports:
+      - '3000:3000'
+    volumes:
+      - '.:/robot_api'
+    volumes_from:
+      - box
+
+volumes:
+  box:
