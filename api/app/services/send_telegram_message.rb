@@ -17,7 +17,8 @@ module SendTelegramMessage
         price: '.product-price--val',
         img: '.product-img img',
         link: '.product-card--wrapper',
-        site: 'nuuvem'
+        site: 'nuuvem',
+        cards: '.product-card--grid'
       }
     end
   end
