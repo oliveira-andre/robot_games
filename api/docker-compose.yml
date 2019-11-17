@@ -7,8 +7,6 @@ services:
       - /box
 
   website:
-    depends_on:
-      - 'postgres'
     build: .
     command: bash start
     ports:
