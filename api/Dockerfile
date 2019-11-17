@@ -1,7 +1,7 @@
 FROM ruby:2.6.1-slim
 
 RUN apt-get update && apt-get install -qq -y --no-install-recommends \
-  build-essential curl
+  build-essential imagemagick curl
 
 RUN apt-get install -y gnupg
 
