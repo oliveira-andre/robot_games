@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SendTelegramMessage
   class << self
     def execute
@@ -5,7 +7,18 @@ module SendTelegramMessage
     end
 
     def nuuvem_games
-      NuuvemSearchService.execute
+      SearchGamesService.initialize(nuuvem_params)
+    end
+
+    def nuuvem_params
+      {
+        env_link: ENV['nuuvem_link'],
+        title: '.product-title',
+        price: '.product-price--val',
+        img: '.product-img img',
+        link: '.product-card--wrapper',
+        site: 'nuuvem'
+      }
     end
   end
 end
