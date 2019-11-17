@@ -17,6 +17,7 @@ Bundler.require(*Rails.groups)
 module Api
   class Application < Rails::Application
     config.load_defaults 5.2
+    config.active_job.queue_adapter = :sidekiq
     config.api_only = true
   end
 end
