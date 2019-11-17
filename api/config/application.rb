@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
-require "rails"
+require 'rails'
 # Pick the frameworks you want:
 require 'active_model/railtie'
 require 'active_job/railtie'
@@ -18,6 +20,7 @@ module Api
   class Application < Rails::Application
     config.load_defaults 5.2
     config.active_job.queue_adapter = :sidekiq
+    config.force_ssl = true
     config.api_only = true
   end
 end
