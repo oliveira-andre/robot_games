@@ -6,7 +6,6 @@ gem 'mechanize'
 gem 'rake'
 gem 'sinatra', '~> 2.0.5'
 gem 'telegram-bot-ruby'
-gem 'faraday'
 
 group :development do
   gem 'tux'
