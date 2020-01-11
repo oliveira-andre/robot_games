@@ -25,7 +25,6 @@ services:
   #     - box
 
   bot:
-    depends_on:
     build: .
     ports:
       - '9292:9292'
