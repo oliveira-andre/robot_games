@@ -14,15 +14,25 @@ services:
     volumes:
       - 'redis:/var/lib/redis/data'
 
-  api:
-    build: ./api
-    command: bash start
+  # api:
+  #   build: ./api
+  #   command: bash start
+  #   ports:
+  #     - '3000:3000'
+  #   volumes:
+  #     - './api:/robot_api'
+  #   volumes_from:
+  #     - box
+
+  bot:
+    depends_on:
+    build: .
     ports:
-      - '3000:3000'
+      - '9292:9292'
     volumes:
-      - './api:/robot_api'
-    volumes_from:
-      - box
+      - '.:/bot'
+    environment:
+      - LANG=C.UTF-8
 
 volumes:
   box:

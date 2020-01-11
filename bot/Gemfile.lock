@@ -1,0 +1,99 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    bond (0.5.1)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    connection_pool (2.2.2)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    domain_name (0.5.20190701)
+      unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.7.5)
+    equalizer (0.0.11)
+    faraday (0.17.0)
+      multipart-post (>= 1.2, < 3)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    ice_nine (0.11.2)
+    inflecto (0.0.2)
+    mechanize (2.7.6)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0)
+      mime-types (>= 1.17.2)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (>= 2.5.2)
+      nokogiri (~> 1.6)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
+    mime-types (3.3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2019.1009)
+    mini_portile2 (2.4.0)
+    multipart-post (2.1.1)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    net-http-digest_auth (1.4.1)
+    net-http-persistent (3.1.0)
+      connection_pool (~> 2.2)
+    nokogiri (1.10.7)
+      mini_portile2 (~> 2.4.0)
+    ntlm-http (0.1.1)
+    rack (2.1.0)
+    rack-protection (2.0.8.1)
+      rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rake (13.0.1)
+    ripl (0.7.1)
+      bond (~> 0.5.1)
+    ripl-multi_line (0.3.1)
+      ripl (>= 0.3.6)
+    ripl-rack (0.2.1)
+      rack (>= 1.0)
+      rack-test (~> 0.6.2)
+      ripl (>= 0.7.0)
+    ruby2_keywords (0.0.2)
+    sinatra (2.0.8.1)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.8.1)
+      tilt (~> 2.0)
+    telegram-bot-ruby (0.11.0)
+      faraday
+      inflecto
+      virtus
+    thread_safe (0.3.6)
+    tilt (2.0.10)
+    tux (0.3.0)
+      ripl (>= 0.3.5)
+      ripl-multi_line (>= 0.2.4)
+      ripl-rack (>= 0.2.0)
+      sinatra (>= 1.2.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.6)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
+    webrobots (0.1.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dotenv
+  mechanize
+  rake
+  sinatra (~> 2.0.5)
+  telegram-bot-ruby
+  tux
+
+BUNDLED WITH
+   1.17.3
