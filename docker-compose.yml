@@ -29,7 +29,7 @@ services:
     ports:
       - '9292:9292'
     volumes:
-      - '.:/bot'
+      - './bot:/bot'
     environment:
       - LANG=C.UTF-8
 
