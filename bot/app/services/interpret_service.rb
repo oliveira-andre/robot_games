@@ -12,7 +12,7 @@ class InterpretService
       bot.listen do |message|
         case message.text
         when '/start'
-          text = 'O que você quer filho da puta? os jogos estão em: /games'
+          text = 'Obrigado por se inscrever em nossa newsletter'
         when '/games'
           SendGamesService.initialize.each do |game|
             text = "
@@ -23,9 +23,9 @@ class InterpretService
             bot.api.send_message(chat_id: message.chat.id, text: text)
           end
         when '/help'
-          text = 'Precisa de ajuda é otário?'
+          text = "Por favor utilize os comandos indicados abaixo:\n\n/start\n/games"
         else
-          text = 'Não entendi nada filho da puta'
+          text = "Não compreendi seu comando\npor favor utilize os comandos indicados abaixo:\n\n/start\n/games"
         end
         unless message.text == '/games'
           bot.api.send_message(chat_id: message.chat.id, text: text)
